@@ -1,0 +1,65 @@
+title: "Architectural Decision Record (ADR)"
+labels: ["proposed"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Introduction
+        An Architectural Decision Record (ADR) is a document to capture information about a specific decision made during the development of a project. It is a record of the decision and the context in which it was made, and should be updated if the decision is ever revisited.
+
+        It is hoped that by using github discussions to capture ADRs, we can make it easier to document discussions around decisions, and make it easier to find and reference ADRs in the future.
+
+        ### Structure
+         An ADR should address the following points:
+         - The problem encountered
+         - The decision made to address the problem
+         - The consequences of the decision
+         - The other options considered
+         - The rationale behind the decision (why was it made?)
+         - The status of the decision (e.g. accepted, rejected, deprecated, superseded by another ADR)
+         - The people involved in making the decision
+
+        ### When to use
+        ADRs should be used to document decisions that have a significant impact on the architecture of a project. They should be used to document decisions that are likely to be revisited in the future, or that are likely to be of interest to future developers.
+
+        ## References
+        - [Architectural Decision Records](https://adr.github.io/)
+        - [AWS Guidance](https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/welcome.html)
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and Problem Statement
+      description: "[Describe the context and problem statement, e.g., in free form using two to three sentences. You may want to articulate the problem in form of a question.]"
+      value: |
+         <!--- What problem are you trying to solve? -->
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: What are the options?
+      description: "[Describe the options you've considered. Please include any relevant code samples or screenshots here.]"
+      value: |
+         <!--- What options have you considered? -->
+    validations:
+      required: true
+  - type: input
+    id: has-id
+    attributes:
+      label: Decision
+      description: What is your decision? It's ok to leave this blank if you're still deciding or if you want to discuss options.
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: What area does this decision affect?
+      options:
+        - Data
+        - Code Efficiency
+        - Business Logic
+        - Security
+        - DevOps
+        - Other
+    validations:
+      required: true
